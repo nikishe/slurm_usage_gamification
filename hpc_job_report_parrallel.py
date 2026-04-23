@@ -17,7 +17,7 @@ DAYS_BACK   = 30
 USER        = sys.argv[1] if len(sys.argv) > 1 else os.popen("whoami").read().strip()
 START_DATE  = (datetime.now() - timedelta(days=DAYS_BACK)).strftime("%Y-%m-%d")
 GENERATED   = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-OUTPUT_FILE = datetime.now().strftime("job_report_%Y_%m_%d_%H%M%S.html")
+OUTPUT_FILE = datetime.now().strftime(f"job_report_{USER}_%Y_%m_%d_%H%M%S.html")
 # ─────────────────────────────────────────────────────────────────────────────
 
 
